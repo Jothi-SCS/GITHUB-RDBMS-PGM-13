@@ -1,31 +1,22 @@
--- ============================================================
--- RDBMS Assignment 13
--- Normalize Student Table up to Third Normal Form (3NF)
--- ============================================================
+=== Step 1: Functional Dependencies ===
+List the functional dependencies here:
+1. StudentID -> 
+2. CourseName -> 
 
--- This is the original unnormalized table.
--- Students must NOT modify this file.
+=== Step 2: Normalization Steps ===
+1NF:
+Explain 1NF here.
 
-DROP TABLE IF EXISTS Student_Original;
+2NF:
+Explain 2NF here.
 
-CREATE TABLE Student_Original (
-StudentID INT PRIMARY KEY,
-StudentName VARCHAR(100) NOT NULL,
-CourseName VARCHAR(100) NOT NULL,
-FacultyName VARCHAR(100) NOT NULL,
-DepartmentName VARCHAR(100) NOT NULL
-);
+3NF:
+Explain 3NF here.
 
-INSERT INTO Student_Original
-(StudentID, StudentName, CourseName, FacultyName, DepartmentName)
-VALUES
-(101, 'Arun',  'BSc Computer Science', 'Dr. Kumar', 'Computer Science'),
-(102, 'Priya', 'BSc Computer Science', 'Dr. Kumar', 'Computer Science'),
-(103, 'Rahul', 'BCA',                  'Dr. Meena', 'Computer Applications'),
-(104, 'Divya', 'BCA',                  'Dr. Meena', 'Computer Applications'),
-(105, 'Kavin', 'BSc IT',               'Dr. Ravi',  'Information Technology');
+=== Step 3: Final 3NF Schema ===
+Table 1 Name:
+Attributes & Keys:
 
--- ============================================================
--- Students should NOT write their answer in this file.
--- Write your solution in solution.sql
--- ============================================================
+Table 2 Name:
+Attributes & Keys:
+
