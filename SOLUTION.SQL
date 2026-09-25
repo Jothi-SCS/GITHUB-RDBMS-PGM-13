@@ -1,28 +1,28 @@
-CREATE TABLE department (
-    department_id INT PRIMARY KEY,
-    department_name VARCHAR(100)
+CREATE TABLE Department (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(100)
 );
 
-CREATE TABLE faculty (
-    faculty_id INT PRIMARY KEY,
-    faculty_name VARCHAR(100),
-    department_id INT,
-    FOREIGN KEY (department_id)
-        REFERENCES department(department_id)
+CREATE TABLE Faculty (
+    FacultyID INT PRIMARY KEY,
+    FacultyName VARCHAR(100),
+    DepartmentID INT,
+    FOREIGN KEY (DepartmentID)
+        REFERENCES Department(DepartmentID)
 );
 
-CREATE TABLE course (
-    course_id INT PRIMARY KEY,
-    course_name VARCHAR(100),
-    faculty_id INT,
-    FOREIGN KEY (faculty_id)
-        REFERENCES faculty(faculty_id)
+CREATE TABLE Course (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(100),
+    FacultyID INT,
+    FOREIGN KEY (FacultyID)
+        REFERENCES Faculty(FacultyID)
 );
 
-CREATE TABLE student (
-    student_id INT PRIMARY KEY,
-    student_name VARCHAR(100),
-    course_id INT,
-    FOREIGN KEY (course_id)
-        REFERENCES course(course_id)
+CREATE TABLE Student (
+    StudentID INT PRIMARY KEY,
+    StudentName VARCHAR(100),
+    CourseID INT,
+    FOREIGN KEY (CourseID)
+        REFERENCES Course(CourseID)
 );
